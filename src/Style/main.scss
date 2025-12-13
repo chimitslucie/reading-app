@@ -5,5 +5,10 @@
 @use './Utils/reset.scss';
 
 @use './Pages/homePage.scss';
+@use './Pages/bookInProgress.scss';
+@use './Pages/bookRead.scss';
+@use './Pages/library.scss';
+@use './Pages/pileToRead.scss';
+@use './Pages/wishlist.scss';
 
 @use './Components/nav.scss';
