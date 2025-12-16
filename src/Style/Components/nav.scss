@@ -1,1 +1,135 @@
-@use '../Utils/Color.scss';
+@use '../Utils/color.scss';
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.logo {
+    width: 62px;
+}
+
+.nav {
+    @media (max-width: 810px) {
+        display: none;
+        position: absolute;
+        right: 5%;
+        top: 15px;
+    }
+
+    &List {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 810px) {
+            align-items: start;
+            background-color: color.$oldPink;
+            border-radius: 5px;
+            flex-direction: column;
+            padding: 30px 20px;
+            width: 250px;
+        }
+
+         @media (max-width: 400px) {
+            width: 200px;
+        }
+    }
+
+    &Item {
+        margin-right: 15px;
+
+        @media (max-width: 810px) {
+            margin-bottom: 20px;
+            margin-right: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+
+            @media (max-width: 810px) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &Link {
+        font-family: "Cormorant", serif;
+        color: color.$anthracite;
+        font-weight: 500;
+        font-size: 22px;
+
+        &:hover {
+            color: color.$purple;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+        &.active {
+            color: color.$purple;
+            font-weight: 700;
+        }
+    }
+
+    &Toggle {
+        cursor: pointer;
+        display: none;
+        height: 30px;
+        position: absolute;
+        right: 6%;
+        top: 5%;
+        transform: translateY(-50%);
+        width: 29px;
+        z-index: 1000;
+
+        @media (max-width: 810px) {
+            display: block;
+        }
+    }
+
+    &Toggle .navToggle:hover {
+        color: color.$white;
+    }
+
+    &ToggleBar {
+        background-color: color.$purple;
+        border-radius: 4px;
+        display: block;
+        height: 4px;
+        margin-top: -1px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transition: all 0.3s ease;
+        width: 100%;
+    }
+
+    &Toggle.toCross .navToggleBar {
+        background-color: color.$purple;
+    }
+
+    &Toggle.toCross .navToggleBarTop {
+        transform: translate(0) rotate(45deg);
+    }
+
+    &Toggle.toCross .navToggleBarMiddle {
+        opacity: 0;
+    }
+
+    &Toggle.toCross .navToggleBarBottom {
+        transform: translate(0) rotate(-45deg);
+    }
+
+    &ToggleBar.navToggleBarTop {
+        transform: translateY(-10px);
+    }
+
+    &ToggleBar.navToggleBarBottom {
+        transform: translateY(10px);
+    }
+
+    &.navOpen {
+        display: block;
+    }
+}
