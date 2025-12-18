@@ -1,0 +1,104 @@
+@use '../Utils/color.scss';
+
+.hero {
+    background-color: color.$powderPink;
+
+    &Content {
+        padding-bottom: 75px;
+
+        @media (max-width: 992px) {
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            padding-bottom: 45px;
+        }
+
+        &Title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 35px;
+
+            @media (max-width: 768px) {
+                margin-bottom: 25px;
+            }
+
+            & .icon {
+                font-size: 40px;
+                color: color.$anthracite;
+                margin-right: 5px;
+
+                @media (max-width: 992px) {
+                    font-size: 35px;
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 30px;
+                }
+
+                @media (max-width: 490px) {
+                    font-size: 25px;
+                }
+
+                @media (max-width: 335px) {
+                    font-size: 18px;
+                }
+            }
+
+            & .title {
+                font-size: 48px;
+                font-weight: 700;
+                color: color.$anthracite;
+                text-transform: uppercase;
+
+                @media (max-width: 992px) {
+                    font-size: 45px;
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 30px;
+                }
+
+                @media (max-width: 490px) {
+                    font-size: 20px;
+                }
+
+                @media (max-width: 335px) {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        &Text {
+            margin-left: 85px;
+
+            @media (max-width: 992px) {
+                margin-left: 0;
+            }
+
+            & .text {
+                font-size: 25px;
+                font-weight: 400;
+                color: color.$anthracite;
+                margin-bottom: 5px !important;
+
+                @media (max-width: 992px) {
+                    font-size: 20px;
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 15px;
+                }
+
+                @media (max-width: 490px) {
+                    font-size: 14px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0 !important;
+                }
+            }
+        }
+    }
+}
