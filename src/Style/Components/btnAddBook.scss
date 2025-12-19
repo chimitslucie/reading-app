@@ -1,0 +1,13 @@
+@use '../Utils/color.scss';
+
+.btnAddBook {
+    font-family: "EB Garamond", serif;
+    text-transform: uppercase;
+    color: color.$purple;
+    font-weight: 400;
+    font-size: 25px;
+    background-color: color.$oldPink;
+    border: 1px solid color.$purple;
+    border-radius: 15px;
+    padding: 14px 35px;
+}
