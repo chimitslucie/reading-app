@@ -1,7 +1,6 @@
 import Nav from '../Components/nav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook } from '@fortawesome/free-solid-svg-icons';
-import BtnAddBook from '../Components/btnAddBook';
 
 function HomePage() {
   return (
@@ -33,7 +32,6 @@ function HomePage() {
           </div>
         </div>
       </div>
-      <BtnAddBook />
     </div>
   );
 }
